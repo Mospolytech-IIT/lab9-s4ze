@@ -1,10 +1,9 @@
 """Operations with database module"""
 
-from sqlalchemy.orm import sessionmaker
+from database import Base, engine, SessionLocal, User, Post
 
-from model_and_connect import engine, User, Post
+Base.metadata.create_all(bind=engine)
 
-SessionLocal = sessionmaker(autoflush=False, bind=engine)
 db = SessionLocal()
 
 # Add multiple rows in Users
