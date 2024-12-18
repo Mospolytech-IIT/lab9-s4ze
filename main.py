@@ -3,7 +3,7 @@
 from fastapi import FastAPI, Depends, encoders, Body, Response
 from fastapi.responses import FileResponse, JSONResponse
 from sqlalchemy.orm import Session
-from database import Base, engine, SessionLocal, User, Post
+from database import Base, engine, SessionLocal, User
 
 Base.metadata.create_all(bind=engine)
 
